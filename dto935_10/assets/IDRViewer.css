@@ -51,6 +51,8 @@ body {
     position: absolute;
 }
 #mainNav {
+    display: none; 
+    visibility: hidden;
     background:url('assets.png') repeat scroll 0 -24px transparent; /* Background pattern courtesy of http://subtlepatterns.com/mocha-grunge/ */
     padding-top: 7px;
     text-align: center;
@@ -113,7 +115,7 @@ body {
 #btnOutlines { background-position: -96px 0; }
 #btnDownload { background-position: -264px 0; }
 #mainContent {
-    top: 40px;
+    top: 0px;
     bottom: 0;
     left: 0;
     right: 0;
