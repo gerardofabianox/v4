@@ -3,72 +3,11 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>constitucion Page6</title>
-<link rel="stylesheet" type="text/css" href="assets/IDRViewer.css">
-<script type="text/javascript">
-var extLoaded = false;
-var intLoaded = false;
-function idrLoad() {
-	idrLoaded = true;
-	var bounds;
-	var heights = new Array(200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200);
-	IDRViewer.makeNavBar(23,6,935,1540,0,heights,'.jpg',bounds, true);
-}
-</script>
-<script src="assets/IDRViewer.js" type="text/javascript"></script>
 </head>
 
-<!-- Background pattern courtesy of http://subtlepatterns.com/grey-washed-wall/ -->
-<body style="background:url('assets/bg.png') repeat scroll 0 0 transparent;">
+<body style="margin: 0;">
 
-<div id="left">
-<div id="leftNav">
-	<div id="btnThumbnails" onclick="IDRViewer.toggleOutlines(false)" title="Thumbnails" class="navBtn inactive"></div>
-	<div id="btnOutlines" onclick="IDRViewer.toggleOutlines(true)" title="Bookmarks" class="navBtn inactive"></div>
-</div>
-<div id="leftContent">
-	<div id="thumbnailPanel"></div>
-	<div id="outlinePanel"></div>
-</div>
-</div>
-
-<div id="main">
-
-<div id="mainNav">
-	<div id="btnSideToggle" onclick="IDRViewer.toggleThumbnails();" class="navBtn"><div title="Sidebar"></div></div>
-
-	<div id="btnPrev" title="Pagina anterior" onclick="IDRViewer.prev()" class="navBtn"></div>
-	<select id="goBtn" onchange="IDRViewer.goToPage(0)">
-
-	</select>
-	<span id="pgCount"></span>
-	<div id="btnNext" title="Pagina siguiente" onclick="IDRViewer.next()" class="navBtn"></div>
-
-	<div id="btnSelect" title="Seleccionar" onclick="IDRViewer.setSelectMode(0)" class="navBtn"></div>
-	<div id="btnMove" title="Pan" onclick="IDRViewer.setSelectMode(1)" class="navBtn"></div>
-
-	<div id="btnZoomOut" title="Zoom Alejar" onclick="IDRViewer.zoomOut()" class="navBtn"></div>
-	<select id="zoomBtn" onchange="IDRViewer.zoomUpdate()">
-		<option value="0">100%</option>
-		<option value="1">Tamano Real</option>
-		<option value="2">Ajustar ancho</option>
-		<option value="3">Ajustar altura</option>
-		<option value="4">Ajustar a la pagina</option>
-		<option value="5">Automatico</option>
-
-	</select>
-	<div id="btnZoomIn" title="Zoom Acercar" onclick="IDRViewer.zoomIn()" class="navBtn"></div>
-	<div id="btnFullscreen" title="Pantalla completa" onclick="IDRViewer.toggleFullScreen();" class="navBtn closed"></div>
-</div>
-
-<div id="mainContent">
-
-<div id="contentContainer">
-
-
-
-<div id="jpedal" style="position:relative; width: 935px; height: 1540px; overflow: hidden; margin: 0 auto; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.5);">
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
 
 <!-- Begin shared CSS values -->
 <style type="text/css" >
@@ -114,7 +53,7 @@ function adjustWordSpacing(widths) {
     var isDone = [];
     var currentSpacing = [];
     var elements = [];
-
+    
     // Initialise arrays
     for (i = 0; i < widths.length; i++) {
         elements[i] = document.getElementById(widths[i][0]);
@@ -126,15 +65,15 @@ function adjustWordSpacing(widths) {
         if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
         isDone[i] = false;
     }
-
+    
     while (!allLinesDone) {
         // Add each adjustment to the render queue without forcing a render
         for (i = 0; i < widths.length; i++) {
             if (!isDone[i]) {
                 elements[i].style.wordSpacing = currentSpacing[i] + 'px';
-            }
+            }            
         }
-
+        
         allLinesDone = true;
         // If elements still need to be wider, add 1 to the word spacing
         for (i = 0; i < widths.length; i++) {
@@ -148,7 +87,7 @@ function adjustWordSpacing(widths) {
             }
         }
     }
-
+    
     for (i = 0; i < widths.length; i++) {
         elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
     }
@@ -340,11 +279,12 @@ function adjustWordSpacing(widths) {
 
 <!-- Begin page background -->
 <div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg6"><object width="935" height="1540" data="06/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<div id="pg6"><object width="935" height="1540" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
 <!-- End page background -->
 
 <!-- Begin page loading JS -->
-<script type="text/javascript">
+<script id="ld6" type="text/javascript">
+
 var isIE = false;
 var f6 = [['t2_6',2874],['t3_6',2874],['t4_6',2276],['t5_6',2874],['t6_6',2874],['t7_6',2874],['t8_6',2875],['t9_6',1314],['ta_6',2874],['tb_6',2874],['tc_6',2874],['td_6',2874],['te_6',1547],['tf_6',2874],['tg_6',2875],['th_6',2874],['ti_6',2874],['tj_6',856],['tk_6',579],['tl_6',1028],['tm_6',603],['tn_6',703],['to_6',652],['tp_6',877],['tq_6',385],['tr_6',2489],['ts_6',2874],['tt_6',747],['tv_6',372],['tw_6',197],['ty_6',1889],['tz_6',2525],['t10_6',698],['t11_6',929],['t12_6',413],['t13_6',2461],['t14_6',2874],['t15_6',2874],['t16_6',2875],['t17_6',2874],['t18_6',2874],['t19_6',2373],['t1b_6',393],['t1c_6',206],['t1e_6',1838],['t1f_6',2696],['t1g_6',2696],['t1h_6',2695],['t1i_6',2695],['t1j_6',1372],['t1k_6',391],['t1l_6',2482],['t1m_6',2874],['t1n_6',2874],['t1o_6',2874],['t1p_6',2874],['t1q_6',444],['t1r_6',379],['t1s_6',2495],['t1t_6',2504],['t1u_6',388],['t1v_6',2486],['t1w_6',2874],['t1x_6',1272]];
 function load6(){
@@ -366,14 +306,5 @@ for (var i = 1; i < divCount; i++) {
 <!-- End page loading JS -->
 
 </div>
-
-</div>
-</div>
-</div>
-<script type="text/javascript">
-	if (extLoaded) { idrLoad(); } else { intLoaded = true; }
-</script>
-<a href="../index.html" title="Volver al Inicio"><img border="0" width="50" height="51" src="../images/volver.png" style="position: fixed; bottom: 205px; right: 0px;" /></a>
-<a href="javascript:history.back()" title="Atras"><img border="0" width="50" height="51" src="../images/atras.png" style="position: fixed; bottom: 150px; right: 0px;" /></a>
 </body>
 </html>

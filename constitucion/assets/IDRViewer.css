@@ -51,8 +51,6 @@ body {
     position: absolute;
 }
 #mainNav {
-    display: none; 
-    visibility: hidden;
     background:url('assets.png') repeat scroll 0 -24px transparent; /* Background pattern courtesy of http://subtlepatterns.com/mocha-grunge/ */
     padding-top: 7px;
     text-align: center;
@@ -115,7 +113,7 @@ body {
 #btnOutlines { background-position: -96px 0; }
 #btnDownload { background-position: -264px 0; }
 #mainContent {
-    top: 0px;
+    top: 40px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -158,19 +156,16 @@ body {
     display: block;
     padding: 5px 0;
     margin: 0 auto;
-    width: 164px;
     text-align: center;
 }
 .thumbnail img{
-    border-radius:3px;
-    border: 2px solid #B0B0B0;
     max-width: 160px;
 }
-.thumbnail img:hover{
-    border: 2px solid #0026FF;
+.currentPageThumbnail {
+    background-color: #777777;
 }
-.currentPageThumbnail img{
-    border: 2px solid #FFD900;
+.thumbnail:hover {
+    background-color: #CCCCCC;
 }
 #outlinePanel ul {
     list-style-type: none;

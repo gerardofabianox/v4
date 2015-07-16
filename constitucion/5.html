@@ -3,72 +3,11 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>constitucion Page5</title>
-<link rel="stylesheet" type="text/css" href="assets/IDRViewer.css">
-<script type="text/javascript">
-var extLoaded = false;
-var intLoaded = false;
-function idrLoad() {
-	idrLoaded = true;
-	var bounds;
-	var heights = new Array(200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200);
-	IDRViewer.makeNavBar(23,5,935,1540,0,heights,'.jpg',bounds, true);
-}
-</script>
-<script src="assets/IDRViewer.js" type="text/javascript"></script>
 </head>
 
-<!-- Background pattern courtesy of http://subtlepatterns.com/grey-washed-wall/ -->
-<body style="background:url('assets/bg.png') repeat scroll 0 0 transparent;">
+<body style="margin: 0;">
 
-<div id="left">
-<div id="leftNav">
-	<div id="btnThumbnails" onclick="IDRViewer.toggleOutlines(false)" title="Thumbnails" class="navBtn inactive"></div>
-	<div id="btnOutlines" onclick="IDRViewer.toggleOutlines(true)" title="Bookmarks" class="navBtn inactive"></div>
-</div>
-<div id="leftContent">
-	<div id="thumbnailPanel"></div>
-	<div id="outlinePanel"></div>
-</div>
-</div>
-
-<div id="main">
-
-<div id="mainNav">
-	<div id="btnSideToggle" onclick="IDRViewer.toggleThumbnails();" class="navBtn"><div title="Sidebar"></div></div>
-
-	<div id="btnPrev" title="Pagina anterior" onclick="IDRViewer.prev()" class="navBtn"></div>
-	<select id="goBtn" onchange="IDRViewer.goToPage(0)">
-
-	</select>
-	<span id="pgCount"></span>
-	<div id="btnNext" title="Pagina siguiente" onclick="IDRViewer.next()" class="navBtn"></div>
-
-	<div id="btnSelect" title="Seleccionar" onclick="IDRViewer.setSelectMode(0)" class="navBtn"></div>
-	<div id="btnMove" title="Pan" onclick="IDRViewer.setSelectMode(1)" class="navBtn"></div>
-
-	<div id="btnZoomOut" title="Zoom Alejar" onclick="IDRViewer.zoomOut()" class="navBtn"></div>
-	<select id="zoomBtn" onchange="IDRViewer.zoomUpdate()">
-		<option value="0">100%</option>
-		<option value="1">Tamano Real</option>
-		<option value="2">Ajustar ancho</option>
-		<option value="3">Ajustar altura</option>
-		<option value="4">Ajustar a la pagina</option>
-		<option value="5">Automatico</option>
-
-	</select>
-	<div id="btnZoomIn" title="Zoom Acercar" onclick="IDRViewer.zoomIn()" class="navBtn"></div>
-	<div id="btnFullscreen" title="Pantalla completa" onclick="IDRViewer.toggleFullScreen();" class="navBtn closed"></div>
-</div>
-
-<div id="mainContent">
-
-<div id="contentContainer">
-
-
-
-<div id="jpedal" style="position:relative; width: 935px; height: 1540px; overflow: hidden; margin: 0 auto; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.5);">
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
 
 <!-- Begin shared CSS values -->
 <style type="text/css" >
@@ -114,7 +53,7 @@ function adjustWordSpacing(widths) {
     var isDone = [];
     var currentSpacing = [];
     var elements = [];
-
+    
     // Initialise arrays
     for (i = 0; i < widths.length; i++) {
         elements[i] = document.getElementById(widths[i][0]);
@@ -126,15 +65,15 @@ function adjustWordSpacing(widths) {
         if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
         isDone[i] = false;
     }
-
+    
     while (!allLinesDone) {
         // Add each adjustment to the render queue without forcing a render
         for (i = 0; i < widths.length; i++) {
             if (!isDone[i]) {
                 elements[i].style.wordSpacing = currentSpacing[i] + 'px';
-            }
+            }            
         }
-
+        
         allLinesDone = true;
         // If elements still need to be wider, add 1 to the word spacing
         for (i = 0; i < widths.length; i++) {
@@ -148,7 +87,7 @@ function adjustWordSpacing(widths) {
             }
         }
     }
-
+    
     for (i = 0; i < widths.length; i++) {
         elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
     }
@@ -252,11 +191,11 @@ function adjustWordSpacing(widths) {
 <!-- End inline CSS -->
 
 <!-- Begin embedded font definitions -->
-<style type="text/css" >
+<style id="fonts5" type="text/css" >
 
 @font-face {
 	font-family: PMLEGJ-ZapfHumanist601BT-Demi5;
-	src :url("05/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+	src :url("5/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
 }
 
 </style>
@@ -329,11 +268,12 @@ function adjustWordSpacing(widths) {
 
 <!-- Begin page background -->
 <div id="pg5Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg5"><object width="935" height="1540" data="05/5.svg" type="image/svg+xml" id="pdf5" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<div id="pg5"><object width="935" height="1540" data="5/5.svg" type="image/svg+xml" id="pdf5" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
 <!-- End page background -->
 
 <!-- Begin page loading JS -->
-<script type="text/javascript">
+<script id="ld5" type="text/javascript">
+
 var isIE = false;
 var f5 = [['t1_5',1244],['t2_5',1068],['t4_5',2874],['t5_5',2874],['t6_5',2874],['t7_5',2433],['t8_5',2874],['t9_5',449],['ta_5',2874],['tc_5',378],['td_5',2496],['te_5',2874],['tf_5',739],['tg_5',2874],['th_5',2874],['ti_5',2874],['tj_5',1115],['tk_5',2874],['tl_5',1967],['tm_5',376],['tn_5',2497],['to_5',2874],['tp_5',2874],['tr_5',2874],['ts_5',2577],['tt_5',2874],['tu_5',2774],['tv_5',378],['tw_5',2496],['tx_5',2874],['ty_5',2874],['tz_5',2874],['t10_5',529],['t11_5',2874],['t12_5',2874],['t13_5',1665],['t14_5',2874],['t15_5',2874],['t16_5',772],['t17_5',2874],['t18_5',557],['t19_5',393],['t1a_5',2481],['t1b_5',2874],['t1c_5',2874],['t1e_5',2874],['t1f_5',2874],['t1g_5',2875],['t1h_5',2348],['t1i_5',2874],['t1j_5',2875],['t1k_5',2874],['t1l_5',1637],['t1m_5',380],['t1n_5',2493],['t1o_5',2874],['t1p_5',2874]];
 function load5(){
@@ -355,14 +295,5 @@ for (var i = 1; i < divCount; i++) {
 <!-- End page loading JS -->
 
 </div>
-
-</div>
-</div>
-</div>
-<script type="text/javascript">
-	if (extLoaded) { idrLoad(); } else { intLoaded = true; }
-</script>
-<a href="../index.html" title="Volver al Inicio"><img border="0" width="50" height="51" src="../images/volver.png" style="position: fixed; bottom: 205px; right: 0px;" /></a>
-<a href="javascript:history.back()" title="Atras"><img border="0" width="50" height="51" src="../images/atras.png" style="position: fixed; bottom: 150px; right: 0px;" /></a>
 </body>
 </html>

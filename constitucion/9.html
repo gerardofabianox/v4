@@ -3,72 +3,11 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>constitucion Page9</title>
-<link rel="stylesheet" type="text/css" href="assets/IDRViewer.css">
-<script type="text/javascript">
-var extLoaded = false;
-var intLoaded = false;
-function idrLoad() {
-	idrLoaded = true;
-	var bounds;
-	var heights = new Array(200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200);
-	IDRViewer.makeNavBar(23,9,935,1540,0,heights,'.jpg',bounds, true);
-}
-</script>
-<script src="assets/IDRViewer.js" type="text/javascript"></script>
 </head>
 
-<!-- Background pattern courtesy of http://subtlepatterns.com/grey-washed-wall/ -->
-<body style="background:url('assets/bg.png') repeat scroll 0 0 transparent;">
+<body style="margin: 0;">
 
-<div id="left">
-<div id="leftNav">
-	<div id="btnThumbnails" onclick="IDRViewer.toggleOutlines(false)" title="Thumbnails" class="navBtn inactive"></div>
-	<div id="btnOutlines" onclick="IDRViewer.toggleOutlines(true)" title="Bookmarks" class="navBtn inactive"></div>
-</div>
-<div id="leftContent">
-	<div id="thumbnailPanel"></div>
-	<div id="outlinePanel"></div>
-</div>
-</div>
-
-<div id="main">
-
-<div id="mainNav">
-	<div id="btnSideToggle" onclick="IDRViewer.toggleThumbnails();" class="navBtn"><div title="Sidebar"></div></div>
-
-	<div id="btnPrev" title="Pagina anterior" onclick="IDRViewer.prev()" class="navBtn"></div>
-	<select id="goBtn" onchange="IDRViewer.goToPage(0)">
-
-	</select>
-	<span id="pgCount"></span>
-	<div id="btnNext" title="Pagina siguiente" onclick="IDRViewer.next()" class="navBtn"></div>
-
-	<div id="btnSelect" title="Seleccionar" onclick="IDRViewer.setSelectMode(0)" class="navBtn"></div>
-	<div id="btnMove" title="Pan" onclick="IDRViewer.setSelectMode(1)" class="navBtn"></div>
-
-	<div id="btnZoomOut" title="Zoom Alejar" onclick="IDRViewer.zoomOut()" class="navBtn"></div>
-	<select id="zoomBtn" onchange="IDRViewer.zoomUpdate()">
-		<option value="0">100%</option>
-		<option value="1">Tamano Real</option>
-		<option value="2">Ajustar ancho</option>
-		<option value="3">Ajustar altura</option>
-		<option value="4">Ajustar a la pagina</option>
-		<option value="5">Automatico</option>
-
-	</select>
-	<div id="btnZoomIn" title="Zoom Acercar" onclick="IDRViewer.zoomIn()" class="navBtn"></div>
-	<div id="btnFullscreen" title="Pantalla completa" onclick="IDRViewer.toggleFullScreen();" class="navBtn closed"></div>
-</div>
-
-<div id="mainContent">
-
-<div id="contentContainer">
-
-
-
-<div id="jpedal" style="position:relative; width: 935px; height: 1540px; overflow: hidden; margin: 0 auto; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.5);">
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
 
 <!-- Begin shared CSS values -->
 <style type="text/css" >
@@ -114,7 +53,7 @@ function adjustWordSpacing(widths) {
     var isDone = [];
     var currentSpacing = [];
     var elements = [];
-
+    
     // Initialise arrays
     for (i = 0; i < widths.length; i++) {
         elements[i] = document.getElementById(widths[i][0]);
@@ -126,15 +65,15 @@ function adjustWordSpacing(widths) {
         if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
         isDone[i] = false;
     }
-
+    
     while (!allLinesDone) {
         // Add each adjustment to the render queue without forcing a render
         for (i = 0; i < widths.length; i++) {
             if (!isDone[i]) {
                 elements[i].style.wordSpacing = currentSpacing[i] + 'px';
-            }
+            }            
         }
-
+        
         allLinesDone = true;
         // If elements still need to be wider, add 1 to the word spacing
         for (i = 0; i < widths.length; i++) {
@@ -148,7 +87,7 @@ function adjustWordSpacing(widths) {
             }
         }
     }
-
+    
     for (i = 0; i < widths.length; i++) {
         elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
     }
@@ -279,11 +218,11 @@ function adjustWordSpacing(widths) {
 <!-- End inline CSS -->
 
 <!-- Begin embedded font definitions -->
-<style type="text/css" >
+<style id="fonts9" type="text/css" >
 
 @font-face {
 	font-family: PMLEGJ-ZapfHumanist601BT-Demi9;
-	src :url("09/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
+	src :url("9/fonts/PMLEGJ-ZapfHumanist601BT-Demi.woff") format("woff");
 }
 
 </style>
@@ -378,11 +317,12 @@ function adjustWordSpacing(widths) {
 
 <!-- Begin page background -->
 <div id="pg9Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg9"><object width="935" height="1540" data="09/9.svg" type="image/svg+xml" id="pdf9" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<div id="pg9"><object width="935" height="1540" data="9/9.svg" type="image/svg+xml" id="pdf9" style="width:935px; height:1540px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
 <!-- End page background -->
 
 <!-- Begin page loading JS -->
-<script type="text/javascript">
+<script id="ld9" type="text/javascript">
+
 var isIE = false;
 var f9 = [['t1_9',1244],['t2_9',1068],['t4_9',2695],['t5_9',705],['t6_9',2874],['t7_9',2874],['t8_9',2874],['t9_9',2874],['ta_9',1770],['tb_9',2874],['tc_9',2874],['td_9',714],['te_9',2874],['tf_9',2874],['tg_9',2874],['th_9',2874],['ti_9',799],['tj_9',2874],['tk_9',2874],['tl_9',2108],['tm_9',2875],['tn_9',2874],['to_9',1563],['tp_9',2874],['tq_9',2874],['tr_9',2659],['tt_9',392],['tu_9',206],['t12_9',1526],['t13_9',2695],['t14_9',820],['t15_9',2874],['t16_9',2874],['t17_9',849],['t18_9',1653],['t19_9',2357],['t1a_9',2874],['t1b_9',579],['t1d_9',377],['t1e_9',199],['t1i_9',1707],['t1j_9',1446],['t1k_9',1941],['t1l_9',2874],['t1m_9',2874],['t1n_9',2874],['t1o_9',1316],['t1q_9',407],['t1r_9',214],['t1z_9',1465],['t20_9',1812],['t21_9',2875],['t22_9',1507],['t23_9',2874],['t24_9',1296],['t25_9',2874],['t26_9',1546],['t27_9',2874],['t28_9',2874],['t29_9',2874],['t2a_9',2874],['t2b_9',2874]];
 function load9(){
@@ -404,14 +344,5 @@ for (var i = 1; i < divCount; i++) {
 <!-- End page loading JS -->
 
 </div>
-
-</div>
-</div>
-</div>
-<script type="text/javascript">
-	if (extLoaded) { idrLoad(); } else { intLoaded = true; }
-</script>
-<a href="../index.html" title="Volver al Inicio"><img border="0" width="50" height="51" src="../images/volver.png" style="position: fixed; bottom: 205px; right: 0px;" /></a>
-<a href="javascript:history.back()" title="Atras"><img border="0" width="50" height="51" src="../images/atras.png" style="position: fixed; bottom: 150px; right: 0px;" /></a>
 </body>
 </html>

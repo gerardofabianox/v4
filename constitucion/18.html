@@ -3,72 +3,11 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>constitucion Page18</title>
-<link rel="stylesheet" type="text/css" href="assets/IDRViewer.css">
-<script type="text/javascript">
-var extLoaded = false;
-var intLoaded = false;
-function idrLoad() {
-	idrLoaded = true;
-	var bounds;
-	var heights = new Array(200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200);
-	IDRViewer.makeNavBar(23,18,935,1540,0,heights,'.jpg',bounds, true);
-}
-</script>
-<script src="assets/IDRViewer.js" type="text/javascript"></script>
 </head>
 
-<!-- Background pattern courtesy of http://subtlepatterns.com/grey-washed-wall/ -->
-<body style="background:url('assets/bg.png') repeat scroll 0 0 transparent;">
+<body style="margin: 0;">
 
-<div id="left">
-<div id="leftNav">
-	<div id="btnThumbnails" onclick="IDRViewer.toggleOutlines(false)" title="Thumbnails" class="navBtn inactive"></div>
-	<div id="btnOutlines" onclick="IDRViewer.toggleOutlines(true)" title="Bookmarks" class="navBtn inactive"></div>
-</div>
-<div id="leftContent">
-	<div id="thumbnailPanel"></div>
-	<div id="outlinePanel"></div>
-</div>
-</div>
-
-<div id="main">
-
-<div id="mainNav">
-	<div id="btnSideToggle" onclick="IDRViewer.toggleThumbnails();" class="navBtn"><div title="Sidebar"></div></div>
-
-	<div id="btnPrev" title="Pagina anterior" onclick="IDRViewer.prev()" class="navBtn"></div>
-	<select id="goBtn" onchange="IDRViewer.goToPage(0)">
-
-	</select>
-	<span id="pgCount"></span>
-	<div id="btnNext" title="Pagina siguiente" onclick="IDRViewer.next()" class="navBtn"></div>
-
-	<div id="btnSelect" title="Seleccionar" onclick="IDRViewer.setSelectMode(0)" class="navBtn"></div>
-	<div id="btnMove" title="Pan" onclick="IDRViewer.setSelectMode(1)" class="navBtn"></div>
-
-	<div id="btnZoomOut" title="Zoom Alejar" onclick="IDRViewer.zoomOut()" class="navBtn"></div>
-	<select id="zoomBtn" onchange="IDRViewer.zoomUpdate()">
-		<option value="0">100%</option>
-		<option value="1">Tamano Real</option>
-		<option value="2">Ajustar ancho</option>
-		<option value="3">Ajustar altura</option>
-		<option value="4">Ajustar a la pagina</option>
-		<option value="5">Automatico</option>
-
-	</select>
-	<div id="btnZoomIn" title="Zoom Acercar" onclick="IDRViewer.zoomIn()" class="navBtn"></div>
-	<div id="btnFullscreen" title="Pantalla completa" onclick="IDRViewer.toggleFullScreen();" class="navBtn closed"></div>
-</div>
-
-<div id="mainContent">
-
-<div id="contentContainer">
-
-
-
-<div id="jpedal" style="position:relative; width: 935px; height: 1540px; overflow: hidden; margin: 0 auto; box-shadow: 0 2px 6px rgba(100, 100, 100, 0.5);">
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1540px;">
 
 <!-- Begin shared CSS values -->
 <style type="text/css" >
@@ -114,7 +53,7 @@ function adjustWordSpacing(widths) {
     var isDone = [];
     var currentSpacing = [];
     var elements = [];
-
+    
     // Initialise arrays
     for (i = 0; i < widths.length; i++) {
         elements[i] = document.getElementById(widths[i][0]);
@@ -126,15 +65,15 @@ function adjustWordSpacing(widths) {
         if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
         isDone[i] = false;
     }
-
+    
     while (!allLinesDone) {
         // Add each adjustment to the render queue without forcing a render
         for (i = 0; i < widths.length; i++) {
             if (!isDone[i]) {
                 elements[i].style.wordSpacing = currentSpacing[i] + 'px';
-            }
+            }            
         }
-
+        
         allLinesDone = true;
         // If elements still need to be wider, add 1 to the word spacing
         for (i = 0; i < widths.length; i++) {
@@ -148,7 +87,7 @@ function adjustWordSpacing(widths) {
             }
         }
     }
-
+    
     for (i = 0; i < widths.length; i++) {
         elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
     }
@@ -330,7 +269,8 @@ function adjustWordSpacing(widths) {
 <!-- End page background -->
 
 <!-- Begin page loading JS -->
-<script type="text/javascript">
+<script id="ld18" type="text/javascript">
+
 var isIE = false;
 var f18 = [['t2_18',2875],['t3_18',2875],['t4_18',1346],['t5_18',2875],['t6_18',806],['t7_18',2875],['t8_18',1992],['t9_18',2874],['ta_18',2874],['tb_18',2874],['td_18',2715],['te_18',429],['tf_18',2445],['tg_18',2874],['th_18',2874],['ti_18',2874],['tj_18',2875],['tk_18',1704],['tl_18',424],['tm_18',2450],['tn_18',1012],['to_18',423],['tp_18',2451],['tq_18',2874],['ts_18',445],['tt_18',2429],['tu_18',2874],['tv_18',1363],['tw_18',421],['tx_18',2453],['tz_18',423],['t10_18',2450],['t11_18',848],['t12_18',424],['t13_18',2450],['t14_18',2538],['t15_18',644],['t16_18',741],['t17_18',698],['t18_18',960],['t19_18',436],['t1a_18',2437],['t1b_18',2875],['t1c_18',304],['t1d_18',421],['t1e_18',2453],['t1f_18',2338],['t1g_18',427],['t1h_18',2447],['t1i_18',2875],['t1j_18',2874],['t1k_18',1311],['t1l_18',441],['t1m_18',2433],['t1n_18',2874],['t1p_18',432],['t1q_18',2442],['t1r_18',2875],['t1s_18',2874],['t1t_18',2433],['t1u_18',447],['t1v_18',2427]];
 function load18(){
@@ -352,14 +292,5 @@ for (var i = 1; i < divCount; i++) {
 <!-- End page loading JS -->
 
 </div>
-
-</div>
-</div>
-</div>
-<script type="text/javascript">
-	if (extLoaded) { idrLoad(); } else { intLoaded = true; }
-</script>
-<a href="../index.html" title="Volver al Inicio"><img border="0" width="50" height="51" src="../images/volver.png" style="position: fixed; bottom: 205px; right: 0px;" /></a>
-<a href="javascript:history.back()" title="Atras"><img border="0" width="50" height="51" src="../images/atras.png" style="position: fixed; bottom: 150px; right: 0px;" /></a>
 </body>
 </html>
